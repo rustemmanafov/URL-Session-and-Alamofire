@@ -24,6 +24,9 @@ class UrlSessionViewModel {
                     do {
                         let posts =  try JSONDecoder().decode([Photos].self, from: data)
                         self.imageArray = posts
+//                        DispatchQueue.main.async {
+//                            self.collectionView.reloadData()
+//                        }
                         //MVVM Clousure
                         complete()
                     } catch {
@@ -34,4 +37,24 @@ class UrlSessionViewModel {
                 }
             }.resume()
         }
+    
+    // Alamofire Usage
+//    func requestData(complete: @escaping(() -> ())) {
+//
+//        let url = "https://jsonplaceholder.typicode.com/photos"
+//
+//        AF.request(url, method: .get).validate().responseDecodable(of: [Photos].self) { response in
+//            debugPrint(response)
+//
+//            switch response.result {
+//            case .success(let photos):
+//                self.imageArray = photos
+//                complete()
+//                self.collectionView.reloadData()
+//
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
+//    }
 }

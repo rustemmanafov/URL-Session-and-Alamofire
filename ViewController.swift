@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var imageArray = [Photos]()
     let viewModel = UrlSessionViewModel()
     
     override func viewDidLoad() {
@@ -24,28 +23,13 @@ class ViewController: UIViewController {
                 self.collectionView.reloadData()
             }
         }
-        //requestData()
-        
-    }
-    
-    // Alamofire Usage
-//    func requestData() {
-//
-//        let url = "https://jsonplaceholder.typicode.com/photos"
-//
-//        AF.request(url, method: .get).validate().responseDecodable(of: [Photos].self) { response in
-//            debugPrint(response)
-//
-//            switch response.result {
-//            case .success(let photos):
-//                self.imageArray = photos
+//        viewModel.requestData() {
+//            DispatchQueue.main.async {
 //                self.collectionView.reloadData()
-//
-//            case .failure(let error):
-//                print(error)
 //            }
 //        }
-//    }
+    }
+    
 }
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
