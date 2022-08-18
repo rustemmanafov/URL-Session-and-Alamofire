@@ -6,39 +6,56 @@
 //
 
 import UIKit
+import Alamofire
 
 class UrlSessionViewModel {
     
     var imageArray = [Photos]()
+    
+    func requestData(complete: @escaping(() -> ())) {
+        PhotoManager.shared.getPhotos { items in
+            self.imageArray = items
+            complete()
+        }
+        
+        
+}
+    
+}
+ 
+
+
+
+
 
     // URL Session Usage
-    func getPhotos(complete: @escaping(() -> ())) {
-        
-            let session = URLSession.shared
-            var request = URLRequest(url: URL(string: "https://jsonplaceholder.typicode.com/photos")!)
-            request.httpMethod = "GET"
-            session.dataTask(with: request) { data, response, error in
-                if let error = error {
-                    print(error.localizedDescription)
-                } else if let data = data {
-                    do {
-                        let posts =  try JSONDecoder().decode([Photos].self, from: data)
-                        self.imageArray = posts
-//                        DispatchQueue.main.async {
-//                            self.collectionView.reloadData()
-//                        }
-                        //MVVM Clousure
-                        complete()
-                    } catch {
-                        print(error.localizedDescription)
-                    }
-                } else {
-                    print(error?.localizedDescription ?? "")
-                }
-            }.resume()
-        }
+    //    func getPhotos(complete: @escaping(() -> ())) {
+    //
+    //            let session = URLSession.shared
+    //            var request = URLRequest(url: URL(string: "https://jsonplaceholder.typicode.com/photos")!)
+    //            request.httpMethod = "GET"
+    //            session.dataTask(with: request) { data, response, error in
+    //                if let error = error {
+    //                    print(error.localizedDescription)
+    //                } else if let data = data {
+    //                    do {
+    //                        let posts =  try JSONDecoder().decode([Photos].self, from: data)
+    //                        self.imageArray = posts
+    //                                DispatchQueue.main.async {
+    //                            self.collectionView.reloadData()
+    //                        }
+    //                        //MVVM Clousure
+    //                        complete()
+    //                    } catch {
+    //                        print(error.localizedDescription)
+    //                    }
+    //                } else {
+    //                    print(error?.localizedDescription ?? "")
+    //                }
+    //            }.resume()
+    //        }
     
-    // Alamofire Usage
+    //  Alamofire Usage
 //    func requestData(complete: @escaping(() -> ())) {
 //
 //        let url = "https://jsonplaceholder.typicode.com/photos"
@@ -50,11 +67,9 @@ class UrlSessionViewModel {
 //            case .success(let photos):
 //                self.imageArray = photos
 //                complete()
-//                self.collectionView.reloadData()
 //
 //            case .failure(let error):
 //                print(error)
 //            }
 //        }
-//    }
-}
+ 

@@ -18,16 +18,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel.getPhotos {
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
-        }
-//        viewModel.requestData() {
+        // URL Session
+//        viewModel.getPhotos {
 //            DispatchQueue.main.async {
 //                self.collectionView.reloadData()
 //            }
 //        }
+        
+        // Alamofire
+        viewModel.requestData() {
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+        }
     }
     
 }
@@ -40,7 +43,10 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell" , for: indexPath) as! CollectionViewCell
-      //  cell.imageLabel.load(url: URL(string: imageArray[indexPath.row].thumbnailUrl ?? "")!)
+        // Extension usage
+        // cell.imageLabel.load(url: URL(string: imageArray[indexPath.row].thumbnailUrl ?? "")!)
+        
+        // SDWebImage Pod usage
         cell.titleLabel.text = viewModel.imageArray[indexPath.row].title
         cell.imageLabel.sd_setImage(with: URL(string: viewModel.imageArray[indexPath.row].thumbnailUrl ?? "" ))
         

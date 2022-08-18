@@ -17,6 +17,8 @@
 		460A377E28A2B9FA00206AE0 /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A377D28A2B9FA00206AE0 /* Photos.swift */; };
 		460A378028A2BB7C00206AE0 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A377F28A2BB7C00206AE0 /* CollectionViewCell.swift */; };
 		460A384928ABF2D700206AE0 /* MVVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A384828ABF2D700206AE0 /* MVVM.swift */; };
+		460A386428AED8A400206AE0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A386328AED8A400206AE0 /* NetworkManager.swift */; };
+		460A386728AEDE4900206AE0 /* PhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A386628AEDE4900206AE0 /* PhotoManager.swift */; };
 		9CB89AF1C31E3BCA24E9CA51 /* Pods_URL_Session.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB530187E3CC1A1A3B352859 /* Pods_URL_Session.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,8 @@
 		460A377D28A2B9FA00206AE0 /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
 		460A377F28A2BB7C00206AE0 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		460A384828ABF2D700206AE0 /* MVVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM.swift; sourceTree = "<group>"; };
+		460A386328AED8A400206AE0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		460A386628AEDE4900206AE0 /* PhotoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoManager.swift; sourceTree = "<group>"; };
 		5A0DBA8F8780D88CF9ED95F3 /* Pods-URL Session.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URL Session.debug.xcconfig"; path = "Target Support Files/Pods-URL Session/Pods-URL Session.debug.xcconfig"; sourceTree = "<group>"; };
 		AB530187E3CC1A1A3B352859 /* Pods_URL_Session.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_URL_Session.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C71E9E048890295AD6517F0B /* Pods-URL Session.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URL Session.release.xcconfig"; path = "Target Support Files/Pods-URL Session/Pods-URL Session.release.xcconfig"; sourceTree = "<group>"; };
@@ -71,6 +75,9 @@
 		460A376528A2B98A00206AE0 /* URL Session */ = {
 			isa = PBXGroup;
 			children = (
+				460A386128AE9FB100206AE0 /* NetworkLayer */,
+				460A386228AED83800206AE0 /* Core */,
+				460A386528AEDE2B00206AE0 /* Photos */,
 				460A376628A2B98A00206AE0 /* AppDelegate.swift */,
 				460A376828A2B98A00206AE0 /* SceneDelegate.swift */,
 				460A378228A4613E00206AE0 /* Controller */,
@@ -110,6 +117,29 @@
 				460A384828ABF2D700206AE0 /* MVVM.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		460A386128AE9FB100206AE0 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		460A386228AED83800206AE0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				460A386328AED8A400206AE0 /* NetworkManager.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		460A386528AEDE2B00206AE0 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				460A386628AEDE4900206AE0 /* PhotoManager.swift */,
+			);
+			path = Photos;
 			sourceTree = "<group>";
 		};
 		4E32CB645633623009FB780B /* Frameworks */ = {
@@ -247,7 +277,9 @@
 				460A376B28A2B98A00206AE0 /* ViewController.swift in Sources */,
 				460A384928ABF2D700206AE0 /* MVVM.swift in Sources */,
 				460A376728A2B98A00206AE0 /* AppDelegate.swift in Sources */,
+				460A386728AEDE4900206AE0 /* PhotoManager.swift in Sources */,
 				460A378028A2BB7C00206AE0 /* CollectionViewCell.swift in Sources */,
+				460A386428AED8A400206AE0 /* NetworkManager.swift in Sources */,
 				460A377128A2B98A00206AE0 /* URL_Session.xcdatamodeld in Sources */,
 				460A377E28A2B9FA00206AE0 /* Photos.swift in Sources */,
 				460A376928A2B98A00206AE0 /* SceneDelegate.swift in Sources */,
