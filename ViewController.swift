@@ -19,11 +19,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         // URL Session
-//        viewModel.getPhotos {
-//            DispatchQueue.main.async {
-//                self.collectionView.reloadData()
-//            }
-//        }
+        //        viewModel.getPhotos {
+        //            DispatchQueue.main.async {
+        //                self.collectionView.reloadData()
+        //            }
+        //        }
         
         // Alamofire
         viewModel.requestData() {
@@ -43,12 +43,15 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell" , for: indexPath) as! CollectionViewCell
-        // Extension usage
+        // Extension usage get image
         // cell.imageLabel.load(url: URL(string: imageArray[indexPath.row].thumbnailUrl ?? "")!)
         
-        // SDWebImage Pod usage
-        cell.titleLabel.text = viewModel.imageArray[indexPath.row].title
+        // SDWebImage usage get image
         cell.imageLabel.sd_setImage(with: URL(string: viewModel.imageArray[indexPath.row].thumbnailUrl ?? "" ))
+        
+        //  cell.titleLabel.text = viewModel.imageArray[indexPath.row].title
+        
+        cell.configure(item: viewModel.imageArray[indexPath.row])
         
         return cell
     }

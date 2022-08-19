@@ -13,9 +13,8 @@ class PhotoManager {
     
     func getPhotos(complete: @escaping(([Photos]) -> ())) {
         
-        let url = "https://jsonplaceholder.typicode.com/photos"
         NetworkManager.shared.request(type: [Photos].self,
-                                      url: url,
+                                      url: NetworkHelper.shared.urlConfiguratiom(url: "photos"),
                                       method: .get) { responce in
             complete(responce)
         }

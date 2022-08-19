@@ -19,6 +19,7 @@
 		460A384928ABF2D700206AE0 /* MVVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A384828ABF2D700206AE0 /* MVVM.swift */; };
 		460A386428AED8A400206AE0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A386328AED8A400206AE0 /* NetworkManager.swift */; };
 		460A386728AEDE4900206AE0 /* PhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A386628AEDE4900206AE0 /* PhotoManager.swift */; };
+		4647CEC128AFE24F00D13D78 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647CEC028AFE24F00D13D78 /* NetworkHelper.swift */; };
 		9CB89AF1C31E3BCA24E9CA51 /* Pods_URL_Session.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB530187E3CC1A1A3B352859 /* Pods_URL_Session.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		460A384828ABF2D700206AE0 /* MVVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM.swift; sourceTree = "<group>"; };
 		460A386328AED8A400206AE0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		460A386628AEDE4900206AE0 /* PhotoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoManager.swift; sourceTree = "<group>"; };
+		4647CEC028AFE24F00D13D78 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		5A0DBA8F8780D88CF9ED95F3 /* Pods-URL Session.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URL Session.debug.xcconfig"; path = "Target Support Files/Pods-URL Session/Pods-URL Session.debug.xcconfig"; sourceTree = "<group>"; };
 		AB530187E3CC1A1A3B352859 /* Pods_URL_Session.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_URL_Session.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C71E9E048890295AD6517F0B /* Pods-URL Session.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URL Session.release.xcconfig"; path = "Target Support Files/Pods-URL Session/Pods-URL Session.release.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				460A386328AED8A400206AE0 /* NetworkManager.swift */,
+				4647CEC028AFE24F00D13D78 /* NetworkHelper.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 			files = (
 				460A376B28A2B98A00206AE0 /* ViewController.swift in Sources */,
 				460A384928ABF2D700206AE0 /* MVVM.swift in Sources */,
+				4647CEC128AFE24F00D13D78 /* NetworkHelper.swift in Sources */,
 				460A376728A2B98A00206AE0 /* AppDelegate.swift in Sources */,
 				460A386728AEDE4900206AE0 /* PhotoManager.swift in Sources */,
 				460A378028A2BB7C00206AE0 /* CollectionViewCell.swift in Sources */,
