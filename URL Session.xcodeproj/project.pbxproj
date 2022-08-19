@@ -75,11 +75,9 @@
 		460A376528A2B98A00206AE0 /* URL Session */ = {
 			isa = PBXGroup;
 			children = (
-				460A386128AE9FB100206AE0 /* NetworkLayer */,
-				460A386228AED83800206AE0 /* Core */,
-				460A386528AEDE2B00206AE0 /* Photos */,
 				460A376628A2B98A00206AE0 /* AppDelegate.swift */,
 				460A376828A2B98A00206AE0 /* SceneDelegate.swift */,
+				460A386128AE9FB100206AE0 /* NetworkLayer */,
 				460A378228A4613E00206AE0 /* Controller */,
 				460A378128A4612F00206AE0 /* Model */,
 				460A384728ABF27800206AE0 /* ViewModel */,
@@ -122,6 +120,8 @@
 		460A386128AE9FB100206AE0 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				460A386228AED83800206AE0 /* Core */,
+				460A386528AEDE2B00206AE0 /* Photos */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";

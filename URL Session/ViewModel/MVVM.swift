@@ -23,17 +23,12 @@ class UrlSessionViewModel {
     
 }
  
-
-
-
-
-
     // URL Session Usage
     //    func getPhotos(complete: @escaping(() -> ())) {
     //
     //            let session = URLSession.shared
     //            var request = URLRequest(url: URL(string: "https://jsonplaceholder.typicode.com/photos")!)
-    //            request.httpMethod = "GET"
+    //            request.httpMethod = method.rawValue
     //            session.dataTask(with: request) { data, response, error in
     //                if let error = error {
     //                    print(error.localizedDescription)
