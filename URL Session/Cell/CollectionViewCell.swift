@@ -20,6 +20,7 @@ class CollectionViewCell: UICollectionViewCell {
     
     func configure(item: TitlePhotosCellProtocol) {
         titleLabel.text = item.titleText
+        // Use SDWebImage
         imageLabel.sd_setImage(with: URL(string: item.photoImage))
     }
 }

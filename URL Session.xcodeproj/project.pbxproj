@@ -79,9 +79,9 @@
 			children = (
 				460A376628A2B98A00206AE0 /* AppDelegate.swift */,
 				460A376828A2B98A00206AE0 /* SceneDelegate.swift */,
-				460A377F28A2BB7C00206AE0 /* CollectionViewCell.swift */,
 				460A386128AE9FB100206AE0 /* NetworkLayer */,
 				460A378228A4613E00206AE0 /* Controller */,
+				46B431EC28B2D8530097AF46 /* Cell */,
 				460A378128A4612F00206AE0 /* Model */,
 				460A384728ABF27800206AE0 /* ViewModel */,
 				460A376C28A2B98A00206AE0 /* Main.storyboard */,
@@ -143,6 +143,14 @@
 				460A386628AEDE4900206AE0 /* PhotoManager.swift */,
 			);
 			path = Photos;
+			sourceTree = "<group>";
+		};
+		46B431EC28B2D8530097AF46 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				460A377F28A2BB7C00206AE0 /* CollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		4E32CB645633623009FB780B /* Frameworks */ = {

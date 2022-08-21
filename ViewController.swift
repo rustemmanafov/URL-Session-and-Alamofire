@@ -27,9 +27,7 @@ class ViewController: UIViewController {
         
         // Alamofire
         viewModel.requestData() {
-            DispatchQueue.main.async {
                 self.collectionView.reloadData()
-            }
         }
     }
     
