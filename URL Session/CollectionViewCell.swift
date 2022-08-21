@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 protocol TitlePhotosCellProtocol {
     var titleText: String  { get }
@@ -19,6 +20,6 @@ class CollectionViewCell: UICollectionViewCell {
     
     func configure(item: TitlePhotosCellProtocol) {
         titleLabel.text = item.titleText
-        imageLabel.image = UIImage(named: item.photoImage)
+        imageLabel.sd_setImage(with: URL(string: item.photoImage))
     }
 }

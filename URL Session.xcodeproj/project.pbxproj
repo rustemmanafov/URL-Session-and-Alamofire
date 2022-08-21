@@ -79,6 +79,7 @@
 			children = (
 				460A376628A2B98A00206AE0 /* AppDelegate.swift */,
 				460A376828A2B98A00206AE0 /* SceneDelegate.swift */,
+				460A377F28A2BB7C00206AE0 /* CollectionViewCell.swift */,
 				460A386128AE9FB100206AE0 /* NetworkLayer */,
 				460A378228A4613E00206AE0 /* Controller */,
 				460A378128A4612F00206AE0 /* Model */,
@@ -104,7 +105,6 @@
 		460A378228A4613E00206AE0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				460A377F28A2BB7C00206AE0 /* CollectionViewCell.swift */,
 				460A376A28A2B98A00206AE0 /* ViewController.swift */,
 			);
 			name = Controller;

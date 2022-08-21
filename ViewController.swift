@@ -43,13 +43,6 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell" , for: indexPath) as! CollectionViewCell
-        // Extension usage get image
-        // cell.imageLabel.load(url: URL(string: imageArray[indexPath.row].thumbnailUrl ?? "")!)
-        
-        // SDWebImage usage get image
-        cell.imageLabel.sd_setImage(with: URL(string: viewModel.imageArray[indexPath.row].thumbnailUrl ?? "" ))
-        
-        //  cell.titleLabel.text = viewModel.imageArray[indexPath.row].title
         
         cell.configure(item: viewModel.imageArray[indexPath.row])
         
