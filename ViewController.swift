@@ -30,7 +30,6 @@ class ViewController: UIViewController {
                 self.collectionView.reloadData()
         }
     }
-    
 }
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
